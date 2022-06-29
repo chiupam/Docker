@@ -12,15 +12,11 @@ docker run -dit --name azure chiupam/azure:latest
 docker exec -it azure sh deploy.sh
 ```
 
-3、最后再次执行部署脚本使用 pm2 守护进程。
-
-```shell
-docker exec -it azure sh deploy.sh
-```
+3、等待25秒后程序自动启动
 
 ## 使用方法
 
-直接在机器人内发送命令即可（好像自动更换 IP 的功能好像不起作用~）
+直接在机器人内发送命令即可，监控493错误自动切换ip。
 
 ## 命令
 

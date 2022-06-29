@@ -16,6 +16,6 @@ main
 while [ "$(cat "/app/config.json" | jq .first)" == '"true"' ]; do
   sleep 1
 done
-echo "初始化完成, 启动..."
 sleep 24
+echo "初始化完成, 启动..."
 pm2-runtime start /app/ecosystem.config.js >/dev/null 2>&1
