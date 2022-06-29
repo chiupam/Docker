@@ -1,0 +1,24 @@
+name: GitHub Actions Mirror
+
+on: [ push, delete, create ]
+
+jobs:
+  git-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror the Github organization repos to Gitee.
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: 'github/chiupam'
+          dst: 'gitee/chiupam'
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          white_list: "Docker"
+          force_update: true
+
+      - name: Delete Workflow Runs # 删除执行日志
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0

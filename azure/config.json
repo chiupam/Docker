@@ -1,0 +1,10 @@
+{
+    "user_id": 1016919456,
+    "bot_api": "505515432:AA",
+    "api_id": "123456789",
+    "api_hash": "abcdefghijklmn",
+    "az_group": "resourceGroup",
+    "az_name": "computerName",
+    "ql_port": "5700",
+    "first": "true"
+}
