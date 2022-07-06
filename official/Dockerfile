@@ -6,7 +6,7 @@ EXPOSE 80
 
 WORKDIR /app/
 
-COPY ./sign/* /app/
+COPY ./official/* /app/
 
 RUN set -ex \
 && apk update -f \
