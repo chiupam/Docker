@@ -1,4 +1,4 @@
-name: 构建 encrypt 镜像
+name: 构建 official 镜像
 
 on:
   workflow_dispatch:
