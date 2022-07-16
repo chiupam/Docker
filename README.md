@@ -9,6 +9,6 @@
 - [快捷切换azure的IP地址](https://github.com/chiupam/Docker/tree/main/azure)
 - [某平台密码加密算法](https://github.com/chiupam/Docker/tree/main/encrypt)
 - [某东算法](https://github.com/chiupam/Docker/tree/main/official)
-- [广东青年大学习](https://github.com/chiupam/Docker/tree/main/qndxx)
+- [云南青年大学习](https://github.com/chiupam/Docker/tree/main/qndxx)
 - [基于selenium库的操作环境](https://github.com/chiupam/Docker/tree/main/selenium)
 - [云函数开发环境](https://github.com/chiupam/Docker/tree/main/server)
