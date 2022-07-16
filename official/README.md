@@ -25,3 +25,80 @@ services:
 EOF
 docker-compose up -d
 ```
+
+## sign
+### URL
+```text
+http://<ip>:80/jd/sign
+```
+### REQUEST BODY
+```text
+body={...}&functionId=...
+```
+### RESPONSE BODY
+```json
+{
+    "code": 200,
+        "data": {
+            "body": {},
+            "client": "android",
+            "clientVersion": "11.0.2",
+            "convertUrl": "",
+            "functionId": "",
+            "sign": "",
+            "st": "",
+            "sv": "111",
+            "uuid": "",
+            "ep": "xxxxxx",
+            "converUrlNew": "body..."
+      }
+}
+```
+## Command
+### URL
+```text
+http://<ip>:80/jd/jKeyCommand
+```
+### REQUEST BODY
+```text
+key=12:/xxxxxx因为有你助力，温暖了四季
+```
+### RESPONSE BODY
+```json
+{
+    "code": 200,
+        "data": {
+            "userName": "xxxxxx",
+            "title": "帮我点一点，膨胀红包就差你的助力啦~",
+            "jumpUrl": "https://wbbny.m.jd.com/XXXXXXXXXX"
+      }
+}
+```
+## demo.py
+```python
+import requests
+
+
+def sign():
+    url = "http://127.0.0.1:9000/jd/sign"
+    data = {
+        "functionId": "",
+        "body": {}
+    }
+    response = requests.post(url, data=data).json()['data']['convertUrl']
+    print(response)
+
+
+def jKeyCommand():
+    url = "http://127.0.0.1:9000/jd/sign"
+    data = {
+        "key": ""
+    }
+    response = requests.post(url, data=data).json()['data']['jumpUrl']
+    print(response)
+
+
+if __name__ == '__main__':
+    sign()
+    jKeyCommand()
+```
