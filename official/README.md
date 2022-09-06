@@ -82,17 +82,17 @@ import requests
 def sign():
     url = "http://127.0.0.1:9000/jd/sign"
     data = {
-        "functionId": "",
-        "body": {}
+        "functionId": "",  # 这里根据自身需要填写（不传入参数绝对报错）
+        "body": {}  # 这里根据自身需要填写（不传入参数绝对报错）
     }
     response = requests.post(url, data=data).json()['data']['convertUrl']
     print(response)
 
 
 def jKeyCommand():
-    url = "http://127.0.0.1:9000/jd/sign"
+    url = "http://127.0.0.1:9000/jd/jKeyCommand"
     data = {
-        "key": ""
+        "key": ""  # 这里根据自身需要填写（不传入参数绝对报错）
     }
     response = requests.post(url, data=data).json()['data']['jumpUrl']
     print(response)
