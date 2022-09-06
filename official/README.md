@@ -1,4 +1,6 @@
-## docker run
+### 该服务在ARM机器上无法运行，请自觉放弃部署
+
+## docker
 
 ```shell
 docker run -dit \
@@ -75,24 +77,26 @@ key=12:/xxxxxx因为有你助力，温暖了四季
 }
 ```
 ## demo.py
+
 ```python
+# -*- coding: utf-8 -*-
 import requests
 
 
 def sign():
-    url = "http://127.0.0.1:9000/jd/sign"
+    url = "http://127.0.0.1:9000/jd/sign"  # 容器内运行请修改端口为 80
     data = {
-        "functionId": "",
-        "body": {}
+        "functionId": "",  # 这里根据自身需要填写（不传入参数绝对报错）
+        "body": {}  # 这里根据自身需要填写（不传入参数绝对报错）
     }
     response = requests.post(url, data=data).json()['data']['convertUrl']
     print(response)
 
 
 def jKeyCommand():
-    url = "http://127.0.0.1:9000/jd/sign"
+    url = "http://127.0.0.1:9000/jd/jKeyCommand"  # 容器内运行请修改端口为 80
     data = {
-        "key": ""
+        "key": ""  # 这里根据自身需要填写（不传入参数绝对报错）
     }
     response = requests.post(url, data=data).json()['data']['jumpUrl']
     print(response)
