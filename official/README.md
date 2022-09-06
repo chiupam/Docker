@@ -1,4 +1,6 @@
-## docker run
+### 该服务在ARM机器上无法运行，请自觉放弃部署
+
+## docker
 
 ```shell
 docker run -dit \
